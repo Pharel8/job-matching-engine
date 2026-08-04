@@ -1,0 +1,121 @@
+Pharel Harold Nanseu Kombou
+
+Data Science & Machine Learning – Working Student / Intern
+
+Giessen, Germany | 01625971365 | haroldpharel@gmail.com | linkedin.com/in/pharel-nanseu-042281356 | github.com/Pharel8
+
+PROFILE
+
+Computer science student (B.Sc., THM Gießen, 5th semester) with a focus on Data Science and Machine Learning, looking for a working student or internship position in the Frankfurt/Gießen area from [date]. Hands-on experience with neural networks (CNN, RNN/LSTM/GRU), classical ML methods (k-NN, Naive Bayes) and the complete data science workflow from EDA and feature engineering to model training and experiment tracking. Reliable, structured and team-oriented – qualities that I have proven both in software projects and in competitive sports (basketball, state league).
+
+EDUCATION
+
+B.Sc. Computer Science | Technical University of Central Hesse (THM), Gießen
+
+since winter term 2024/25 · expected completion summer semester 2027
+
+• Specialization pool: Data Science, Deep Learning, Machine Learning, IT Security, Automata and Compiler Construction
+
+• Relevant modules: Introduction to Deep Learning, Machine Learning, Software Engineering, Fundamentals of IT Security
+
+PROFESSIONAL EXPERIENCE
+
+Order Pickers | Edeka, Gießen
+
+[Start date] – today
+
+• Picking and inventory maintenance in warehouse operations in compliance with time and quality specifications
+
+• Reliable work in a shift system, team coordination with high order volumes
+
+Order Pickers | Aldi, Gießen
+
+[Start Date] – [End Date]
+
+• Picking, packing and quality control of goods in the warehouse
+
+TECHNICAL KNOWLEDGE
+
+• Deep Learning: PyTorch, CNNs, RNN/LSTM/GRU (Sequenzmodellierung & Musikgenerierung), MLPs, DQN, Transformer & Tokenizer (NLP), Backpropagation & Gradient Descent (NumPy from scratch), Experiment-Tracking mit Weights & Biases
+
+• Machine Learning: k-NN mit KD-Trees, Naive Bayes, Random Forest, XGBoost, Cross-Validation, PCA, t-SNE, GTM, UMAP, GMM
+
+• Data Science: pandas, NumPy, matplotlib, seaborn, scikit-learn, explorative Datenanalyse (EDA), Feature Engineering, Power BI
+
+• Programming: Python, Java, TypeScript, SQL
+
+• Software Engineering: Spring Boot, Vite, PostgreSQL, Docker & Docker Compose, Git/GitHub, REST-APIs
+
+• Tools: Kaggle, Google Colab, LaTeX, Streamlit
+
+PROJECTS (SELECTION)
+
+Music Generation with RNN (LSTM/GRU)2025/2026
+
+• Sequence model for generating Irish folk melodies based on the IrishMAN dataset ([number] pieces of music) trained
+
+• Implemented LSTM and GRU architectures, compared via ablation study ([metric, e.g. validation loss: X vs. Y]) and adapted for Google Colab
+
+• ABC grammar validity check and piano roll visualization developed for quality control of generated pieces
+
+Technologien: Python, PyTorch, Weights & Biases, Google Colab
+
+Image classification with CNN2025/2026
+
+• CNN developed to classify garments (5 categories) under a strict budget of <800,000 parameters
+
+• Validation accuracy of approximately 75% achieved; Fixed root cause analysis of an accuracy plateau at 35% (incorrect normalization)
+
+• Domain gap analysis carried out using your own test photos (42% test accuracy) and causes documented
+
+Technologien: Python, PyTorch, Weights & Biases (Entity eidl-thm)
+
+PWI Task Database2025/2026
+
+• Full-stack application developed in a team: multi-layer backend architecture (entity/repository/service/controller/DTO)
+
+• Implemented full CRUD for core entities (Item, ItemCollection, Author, Tag) and Swagger/OpenAPI documentation
+
+• Containerized deployment orchestrated via Docker Compose
+
+Technologien: Spring Boot, PostgreSQL, Vite/TypeScript, Docker Compose
+
+House Prices – RegressionEigenständig
+
+• Full ML pipeline implemented: EDA, feature engineering, model training and comparison (Linear Regression, Random Forest, XGBoost)
+
+• Best model achieved [RMSE/Score] on the Kaggle Leaderboard
+
+Technologyn: Python, pandas, scikit-learn, XGBoost
+
+Sentiment Analysis Chatbot for Amazon ReviewsStandalone
+
+• Streamlit application for automated sentiment analysis of [number] product reviews developed with GPT-4o-mini
+
+Technologies: Python, Streamlit, GPT-4o-mini
+
+Sales- & E-Commerce-AnalysenEigenständig
+
+• Superstore sales analysis carried out with pandas and matplotlib; Key sales and key performance indicator trends identified
+
+• Interactive Power BI dashboard designed for e-commerce metrics with [number] KPIs
+
+Technologyn: Python, pandas, matplotlib, Power BI
+
+CERTIFICATES
+
+• Python for Data Science and Machine Learning Essential Training — LinkedIn Learning (Teil 1 & 2)
+
+• Statistics Foundations: Using Data Sets — LinkedIn Learning
+
+LANGUAGES
+
+• French – Mother tongue
+
+• German – C1
+
+• English – B1
+
+ADDITIONAL KNOWLEDGE
+
+• IT security: RSA, AES, OFB/CFB/CTR modes, OpenSSL, threat modeling, hash functions
