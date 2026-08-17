@@ -1,0 +1,111 @@
+﻿Pharel Harold Nanseu Kombou
+
+Data Science, Machine Learning & MLOps – Werkstudent / Praktikant
+
+Gießen, Deutschland | 0162571365 | haroldpharel@gmail.com | linkedin.com/in/pharel-nanseu-042281356 | github.com/Pharel8
+
+PROFIL
+
+Informatik-Student (B.Sc., THM Gießen, 5. Semester) mit Schwerpunkt Data Science, Machine Learning und praktischer Erfahrung im Aufbau vollständiger ML-Workflows – von Datenpipelines über Modelltraining bis zu Experiment-Tracking und Monitoring (Weights & Biases). Zusätzliche Software-Engineering-Erfahrung mit containerisierten Full-Stack-Anwendungen (Docker, Spring Boot, REST-APIs) und wachsendem Interesse an MLOps und Cloud-Plattformen. Sucht eine Werkstudenten- oder Praktikumsstelle im Raum Frankfurt/Gießen, in der Data-Science-Methodik auf reale, produktionsnahe Systeme trifft. Verlässlich, strukturiert und teamorientiert – Eigenschaften, die auch im Leistungssport (Basketball, Landesliga) geprägt wurden.
+
+AUSBILDUNG
+
+B.Sc. Informatik  |  Technische Hochschule Mittelhessen (THM), Gießen
+
+seit WiSe 2024/25 · voraussichtlicher Abschluss Sommersemester 2027
+
+Vertiefungspool: Data Science, Deep Learning, Machine Learning, IT-Sicherheit, Automaten und Compilerbau
+
+Relevante Module: Einführung in Deep Learning, Maschinelles Lernen, Softwaretechnik, Grundlagen der IT-Sicherheit
+
+BERUFSERFAHRUNG
+
+Kommissionierer  |  Edeka, Gießen
+
+[Startdatum] – heute
+
+Kommissionierung und Bestandspflege im Lagerbetrieb unter Einhaltung von Zeit- und Qualitätsvorgaben
+
+Zuverlässige Arbeit im Schichtsystem, Teamkoordination bei hohem Auftragsvolumen
+
+Kommissionierer  |  Aldi, Gießen
+
+[Startdatum] – [Enddatum]
+
+Kommissionierung, Verpackung und Qualitätskontrolle von Waren im Lager
+
+TECHNISCHE KENNTNISSE
+
+Machine Learning & MLOps: PyTorch, CNNs, RNN/LSTM/GRU, MLPs, Transformer & Tokenizer, k-NN, Naive Bayes, Random Forest, XGBoost, Cross-Validation, PCA/t-SNE/UMAP, Experiment-Tracking & Monitoring mit Weights & Biases
+
+Data Engineering & Software: Spring Boot, Vite, PostgreSQL, Docker & Docker Compose, Git/GitHub, REST-APIs, CI/CD-Grundlagen
+
+Data Science: pandas, NumPy, matplotlib, seaborn, scikit-learn, explorative Datenanalyse (EDA), Feature Engineering, Power BI
+
+Programmierung: Python, Java, TypeScript, SQL
+
+Cloud & Deployment: Docker-basierte Containerisierung; aktuell Vertiefung von Cloud-Grundlagen (AWS/Azure) im Selbststudium
+
+Tools: Kaggle, Google Colab, LaTeX, Streamlit
+
+PROJEKTE (AUSWAHL)
+
+Bildklassifikation mit CNN — Modell-Monitoring & Experiment-Tracking 2025/2026
+
+CNN zur Klassifikation von Kleidungsstücken (5 Kategorien) unter einem strikten Budget von <800.000 Parametern entwickelt
+
+Vollständiges Experiment-Tracking und Monitoring des Trainingsprozesses mit Weights & Biases (Metriken, Hyperparameter, Modellvergleich)
+
+Validierungsgenauigkeit von ca. 75 % erreicht; Root-Cause-Analyse eines Genauigkeits-Plateaus (fehlerhafte Normalisierung) systematisch identifiziert und behoben
+
+Technologien: Python, PyTorch, Weights & Biases (Entity eidl-thm)
+
+PWI-Aufgabendatenbank — Full-Stack-Anwendung mit Datenpipeline 2025/2026
+
+Full-Stack-Anwendung im Team entwickelt: mehrschichtige Backend-Architektur (Entity/Repository/Service/Controller/DTO) als strukturierte Datenpipeline
+
+Vollständiges CRUD für Kernentitäten sowie Swagger/OpenAPI-Dokumentation umgesetzt
+
+Containerisiertes Deployment via Docker Compose orchestriert – reproduzierbare, portable Infrastruktur
+
+Technologien: Spring Boot, PostgreSQL, Vite/TypeScript, Docker Compose
+
+Musikgenerierung mit RNN (LSTM/GRU) 2025/2026
+
+Sequenzmodell zur Generierung irischer Folk-Melodien auf Basis des IrishMAN-Datensatzes trainiert
+
+LSTM- und GRU-Architekturen implementiert und per Ablation-Studie systematisch verglichen
+
+Automatisierte Qualitätskontrolle durch ABC-Grammatik-Validitätsprüfung und Piano-Roll-Visualisierung
+
+Technologien: Python, PyTorch, Weights & Biases, Google Colab
+
+House Prices – Regression Eigenständig
+
+Vollständige ML-Pipeline umgesetzt: EDA, Feature Engineering, Modelltraining und -vergleich (Linear Regression, Random Forest, XGBoost)
+
+Technologien: Python, pandas, scikit-learn, XGBoost
+
+Sales- & E-Commerce-Analysen Eigenständig
+
+Superstore-Sales-Analyse mit pandas und matplotlib; interaktives Power-BI-Dashboard für E-Commerce-Kennzahlen entwickelt
+
+Technologien: Python, pandas, matplotlib, Power BI
+
+ZERTIFIKATE
+
+Python for Data Science and Machine Learning Essential Training — LinkedIn Learning (Teil 1 & 2)
+
+Statistics Foundations: Using Data Sets — LinkedIn Learning
+
+SPRACHEN
+
+Französisch – Muttersprache
+
+Deutsch – C1
+
+Englisch – B1
+
+ZUSATZKENNTNISSE
+
+IT-Sicherheit: RSA, AES, OFB/CFB/CTR-Modi, OpenSSL, Threat Modeling, Hashfunktionen
