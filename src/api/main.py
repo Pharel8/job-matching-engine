@@ -5,6 +5,8 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import os
+import requests
+
 from dotenv import load_dotenv
 from openai import OpenAI
 
@@ -12,11 +14,31 @@ load_dotenv()
 
 app = FastAPI(title="Job Matching Engine API")
 
+# Download large data files from Hugging Face Hub if not already present locally
+HF_BASE_URL = "https://huggingface.co/datasets/pharelMl/job-matching-engine-data/resolve/main"
+
+def download_if_missing(local_path, filename):
+    if not os.path.exists(local_path):
+        print(f"Downloading {filename}...")
+        url = f"{HF_BASE_URL}/{filename}"
+        response = requests.get(url)
+        response.raise_for_status()
+        os.makedirs(os.path.dirname(local_path), exist_ok=True)
+        with open(local_path, 'wb') as f:
+            f.write(response.content)
+        print(f"Downloaded {filename}")
+
+download_if_missing('data/combined_with_scores.pkl', 'combined_with_scores.pkl')
+download_if_missing('data/job_embeddings.npy', 'job_embeddings.npy')
+
 model = SentenceTransformer('paraphrase-multilingual-mpnet-base-v2')
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 combined = pd.read_pickle('data/combined_with_scores.pkl')
 job_embeddings = np.load('data/job_embeddings.npy')
+
+
+
 
 
 class MatchRequest(BaseModel):
