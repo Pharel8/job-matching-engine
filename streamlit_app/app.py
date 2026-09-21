@@ -1,14 +1,14 @@
 import streamlit as st
 import requests
 import PyPDF2
-import io
+import os
 
 st.set_page_config(page_title="Job Matching Engine", page_icon="🎯")
 
 st.title("🎯 Job Matching Engine")
 st.write("Lade deinen Lebenslauf hoch oder füge den Text ein, um passende Stellenanzeigen zu finden.")
 
-API_URL = "http://127.0.0.1:8000/match"
+API_URL = os.getenv("API_URL", "http://127.0.0.1:8000/match")
 
 
 def extract_text_from_pdf(uploaded_file):
