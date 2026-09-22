@@ -1,14 +1,14 @@
 import streamlit as st
 import requests
 import PyPDF2
-import io
+import os
 
 st.set_page_config(page_title="Job Matching Engine", page_icon="🎯")
 
 st.title("🎯 Job Matching Engine")
 st.write("Lade deinen Lebenslauf hoch oder füge den Text ein, um passende Stellenanzeigen zu finden.")
 
-API_URL = "http://127.0.0.1:8000/match"
+API_URL = os.getenv("API_URL", "http://127.0.0.1:8000/match")
 
 
 def extract_text_from_pdf(uploaded_file):
@@ -37,6 +37,7 @@ with tab2:
         cv_text = pasted_text
 
 top_n = st.slider("Anzahl der Ergebnisse", min_value=5, max_value=20, value=10)
+with_explanation = st.checkbox("Erklärungen generieren (dauert länger)", value=False)
 
 if st.button("Passende Stellen finden", type="primary"):
     if not cv_text.strip():
@@ -44,7 +45,11 @@ if st.button("Passende Stellen finden", type="primary"):
     else:
         with st.spinner("Suche läuft..."):
             try:
-                response = requests.post(API_URL, json={"cv_text": cv_text, "top_n": top_n})
+                response = requests.post(API_URL, json={
+                    "cv_text": cv_text,
+                    "top_n": top_n,
+                    "with_explanation": with_explanation
+                })
                 response.raise_for_status()
                 results = response.json()
 
@@ -59,7 +64,12 @@ if st.button("Passende Stellen finden", type="primary"):
                         with col2:
                             st.metric("Score", f"{r['score']:.2f}")
 
+                        if r.get("explanation"):
+                            with st.expander("💡 Warum passt das?"):
+                                st.markdown(r["explanation"])
+
             except requests.exceptions.ConnectionError:
-                st.error("Kann die API nicht erreichen. Läuft der FastAPI-Server? (uvicorn src.api.main:app)")
+                st.error("Kann die API nicht erreichen. Läuft der FastAPI-Server?")
             except Exception as e:
                 st.error(f"Fehler: {e}")
+
