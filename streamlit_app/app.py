@@ -6,6 +6,7 @@ import streamlit as st
 st.set_page_config(page_title="Job Matching Engine", page_icon="🎯")
 
 API_URL = os.getenv("API_URL", "http://127.0.0.1:8000/match")
+MAX_CV_CHARS = 20000  # keep in sync with the limit in src/api/main.py
 SUPPORTED = ["de", "en", "fr"]
 
 T = {
@@ -22,9 +23,11 @@ T = {
         "checkbox": "Erklärungen generieren (dauert länger)",
         "button": "Passende Stellen finden",
         "empty": "Bitte lade einen Lebenslauf hoch oder füge den Text ein.",
+        "too_long": "Der Lebenslauf ist zu lang (maximal {max} Zeichen).",
         "spinner": "Suche läuft... (beim ersten Aufruf kann der Start einige Minuten dauern)",
         "found": "{n} passende Stellen gefunden",
         "why": "💡 Warum passt das?",
+        "no_expl": "Erklärung momentan nicht verfügbar.",
         "score": "Score",
         "conn_error": "Kann die API nicht erreichen.",
         "error": "Fehler: {e}",
@@ -42,9 +45,11 @@ T = {
         "checkbox": "Generate explanations (slower)",
         "button": "Find matching jobs",
         "empty": "Please upload a CV or paste its text.",
+        "too_long": "The CV is too long (maximum {max} characters).",
         "spinner": "Searching... (the first request may take a few minutes to start up)",
         "found": "{n} matching jobs found",
         "why": "💡 Why is this a match?",
+        "no_expl": "Explanation currently unavailable.",
         "score": "Score",
         "conn_error": "Cannot reach the API.",
         "error": "Error: {e}",
@@ -62,9 +67,11 @@ T = {
         "checkbox": "Générer des explications (plus lent)",
         "button": "Trouver des offres",
         "empty": "Merci de téléverser un CV ou de coller son texte.",
+        "too_long": "Le CV est trop long (maximum {max} caractères).",
         "spinner": "Recherche en cours... (la première requête peut prendre quelques minutes)",
         "found": "{n} offres trouvées",
         "why": "💡 Pourquoi cette offre ?",
+        "no_expl": "Explication momentanément indisponible.",
         "score": "Score",
         "conn_error": "Impossible de joindre l'API.",
         "error": "Erreur : {e}",
@@ -117,22 +124,33 @@ with tab2:
 top_n = st.slider(t["slider"], min_value=5, max_value=20, value=10)
 with_explanation = st.checkbox(t["checkbox"], value=False)
 
+# Results survive Streamlit reruns (expander clicks, slider moves) via session_state
 if "results" not in st.session_state:
     st.session_state.results = None
+if "expl_requested" not in st.session_state:
+    st.session_state.expl_requested = False
 
 if st.button(t["button"], type="primary"):
     if not cv_text.strip():
         st.warning(t["empty"])
+    elif len(cv_text) > MAX_CV_CHARS:
+        st.warning(t["too_long"].format(max=MAX_CV_CHARS))
     else:
         with st.spinner(t["spinner"]):
             try:
-                response = requests.post(API_URL, json={
-                    "cv_text": cv_text,
-                    "top_n": top_n,
-                    "with_explanation": with_explanation,
-                }, timeout=600)
+                response = requests.post(
+                    API_URL,
+                    json={
+                        "cv_text": cv_text,
+                        "top_n": top_n,
+                        "with_explanation": with_explanation,
+                    },
+                    headers={"X-API-Key": os.getenv("APP_API_KEY", "3kKSEztArgKo9c5mARKga53NMqks1ZFKocGbefxsWUs")},
+                    timeout=600,
+                )
                 response.raise_for_status()
                 st.session_state.results = response.json()
+                st.session_state.expl_requested = with_explanation
             except requests.exceptions.ConnectionError:
                 st.error(t["conn_error"])
             except Exception as e:
@@ -152,3 +170,5 @@ if st.session_state.results:
             if r.get("explanation"):
                 with st.expander(t["why"]):
                     st.markdown(r["explanation"])
+            elif st.session_state.expl_requested:
+                st.caption(t["no_expl"])
