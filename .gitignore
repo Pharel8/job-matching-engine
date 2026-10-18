@@ -220,3 +220,11 @@ __marimo__/
 data/combined_with_scores.pkl
 
 data/job_embeddings.npy
+
+.idea/
+.venv/
+data/raw/
+data/my_cv.txt
+data/*.pkl
+data/*.npy
+.env
